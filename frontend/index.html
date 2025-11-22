@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fileDB</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="paste.css">
+  <script type="module" src="supabaseClient.js"></script>
+  <script type="module" src="paste.js"></script>
+  <script type="module" src="fileupload.js"></script>
+  <script type="module" src="pasteview.js"></script>
+</head>
+<body>
+  <header>
+    <h1>fileDB</h1>
+  </header>
+
+  <main>
+    <section id="pasteSection">
+      <h2>Create New Paste</h2>
+      <form id="pasteForm">
+        <input id="pasteTitle" placeholder="Paste Title" required>
+        <select id="pasteLanguage">
+          <option value="plaintext">Plain Text</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+        </select>
+        <textarea id="pasteContent" placeholder="Paste your code" required></textarea>
+        <button type="submit">Create Paste</button>
+      </form>
+    </section>
+
+    <section id="fileSection">
+      <h2>Upload File</h2>
+      <form id="fileForm">
+        <input type="file" id="fileInput" required>
+        <button type="submit">Upload File</button>
+      </form>
+    </section>
+
+    <section id="pasteView">
+      <h2 id="pasteTitleView"></h2>
+      <pre id="pasteContentView"></pre>
+      <a id="fileLink" target="_blank">Download File</a>
+    </section>
+  </main>
+</body>
+</html>
