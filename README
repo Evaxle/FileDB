@@ -1,0 +1,30 @@
+# fileDB
+
+fileDB is a Pastebin-like web application that allows users to save code snippets or files with a custom name, select a language for syntax highlighting, and generate a sharable URL. It uses MongoDB as its database.
+
+## Features
+- Create code pastes with syntax highlighting
+- Upload files with content saved
+- Sharable URLs for each paste/file
+- REST API for creating, retrieving, and listing pastes
+
+## Installation
+1. Clone the repo
+2. Run `npm install`
+3. Create a `.env` file with:
+
+MONGO_URI=your_mongodb_connection_string
+PORT=3000
+
+4. Run `npm start` to launch the app
+
+## Docker
+
+docker build -t filedb .
+docker run -p 3000:3000 --env-file .env filedb
+
+
+## API Endpoints
+- `POST /api/paste` - Create a new paste or file
+- `GET /api/paste/:id` - Retrieve paste/file by ID
+- `GET /api/pastes` - List recent pastes/files
