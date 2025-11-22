@@ -1,14 +1,9 @@
-export const metadata = {
-  title: "FileDB Pastebin",
-  description: "A simple serverless pastebin"
-};
+export const metadata = { title: "FileDB", description: "Serverless pastebin" };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "sans-serif" }}>
-        {children}
-      </body>
+      <body style={{ margin: 0, fontFamily: "sans-serif" }}>{children}</body>
     </html>
   );
 }
