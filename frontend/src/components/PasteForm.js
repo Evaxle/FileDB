@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { supabase } from './supabaseClient'
 
 export default function PasteForm({ onBack }) {
   const [title, setTitle] = useState('')
@@ -6,18 +7,19 @@ export default function PasteForm({ onBack }) {
   const [content, setContent] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setSubmitting(true)
-    const payload = { title, language, content }
-    const res = await fetch('http://localhost:3000/api/paste', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    const result = await res.json()
+    const { data, error } = await supabase
+      .from('pastes')
+      .insert([{ title, language, content }])
+      .select()
     setSubmitting(false)
-    if (result._id) window.location.href = `/paste/${result._id}`
+    if (error) {
+      console.error(error)
+    } else if (data && data[0]?.id) {
+      window.location.href = `/paste/${data[0].id}`
+    }
   }
 
   return (
