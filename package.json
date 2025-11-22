@@ -1,0 +1,16 @@
+{
+  "name": "filedb",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@vercel/kv": "0.2.3",
+    "uuid": "9.0.1"
+  }
+}
