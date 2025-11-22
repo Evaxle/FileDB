@@ -46,11 +46,7 @@ export default function Home() {
           Create Paste
         </button>
       </form>
-      {url && (
-        <p style={{ marginTop: "1rem" }}>
-          Paste created: <a href={url}>{url}</a>
-        </p>
-      )}
+      {url && <p>Paste created: <a href={url}>{url}</a></p>}
       {error && <p style={{ color: "crimson" }}>Error: {error}</p>}
     </div>
   );
