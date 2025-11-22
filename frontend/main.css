@@ -1,6 +1,6 @@
 body {
-  background-color: #1a202c;
-  color: #edf2f7;
+  background-color: #1e293b;
+  color: #f1f5f9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,39 +14,57 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #5a67d8;
+  color: #6366f1;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: #7f9cf5;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #818cf8;
 }
 
-textarea {
+p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+section {
   width: 100%;
-  max-width: 600px;
-  height: 12rem;
-  padding: 1rem;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  background-color: #2d3748;
-  border: 1px solid #4a5568;
-  color: #edf2f7;
-  resize: none;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-size: 1rem;
   outline: none;
 }
 
-textarea:focus {
-  border-color: #5a67d8;
-  box-shadow: 0 0 0 2px rgba(90, 103, 216, 0.3);
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+textarea {
+  min-height: 12rem;
+  resize: none;
 }
 
 button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background-color: #5a67d8;
-  color: #fff;
+  padding: 0.5rem 1.25rem;
+  background-color: #6366f1;
+  color: #f1f5f9;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -55,43 +73,36 @@ button {
 }
 
 button:hover {
-  background-color: #434190;
+  background-color: #4f46e5;
 }
 
 #pasteLink a {
-  color: #7f9cf5;
+  color: #818cf8;
   text-decoration: none;
   word-break: break-all;
 }
 
 #pasteLink a:hover {
-  color: #5a67d8;
+  color: #6366f1;
 }
 
 pre {
   width: 100%;
   max-width: 700px;
-  background-color: #2d3748;
-  border: 1px solid #4a5568;
+  background-color: #0f172a;
+  border: 1px solid #475569;
   border-radius: 0.5rem;
   padding: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
-  color: #edf2f7;
-}
-
-section {
-  width: 100%;
-  max-width: 700px;
-  margin-bottom: 2rem;
+  color: #f1f5f9;
 }
 
 @media (max-width: 640px) {
   textarea {
-    height: 9rem;
-    padding: 0.75rem;
+    min-height: 9rem;
   }
   button {
     padding: 0.5rem 1rem;

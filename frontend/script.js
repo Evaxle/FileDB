@@ -3,7 +3,7 @@ document.getElementById('createPaste').addEventListener('click', async () => {
   const language = document.getElementById('pasteLanguage').value
   const content = document.getElementById('pasteContent').value
   if (!title || !content) return alert('Title and content cannot be empty')
-  const res = await fetch('/api/paste', {
+  const res = await fetch('/api/paste.js', {
     method: 'POST',
     body: JSON.stringify({ title, content, language })
   })
