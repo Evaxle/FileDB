@@ -2,9 +2,9 @@ let pastes = {}
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
-    const { content } = JSON.parse(req.body)
+    const { title, content, language } = JSON.parse(req.body)
     const id = Math.random().toString(36).substr(2, 8)
-    pastes[id] = { content, createdAt: new Date() }
+    pastes[id] = { title, content, language, createdAt: new Date() }
     res.status(200).json({ id, url: `/pasteview.html?id=${id}` })
   } else if (req.method === 'GET') {
     const { id } = req.query

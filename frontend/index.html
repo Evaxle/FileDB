@@ -7,9 +7,19 @@
 </head>
 <body>
 <h1>Create a Paste</h1>
-<textarea id="pasteContent" placeholder="Type your code here"></textarea>
-<button id="createPaste">Create Paste</button>
-<p id="pasteLink"></p>
+<section>
+  <input id="pasteTitle" placeholder="Paste Title" />
+  <select id="pasteLanguage">
+    <option value="plaintext">Plain Text</option>
+    <option value="javascript">JavaScript</option>
+    <option value="python">Python</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+  </select>
+  <textarea id="pasteContent" placeholder="Type your code here"></textarea>
+  <button id="createPaste">Create Paste</button>
+  <p id="pasteLink"></p>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
